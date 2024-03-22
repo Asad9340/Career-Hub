@@ -1,8 +1,7 @@
 function Category({ category }) {
-  console.log(category);
   const { logo, category_name, availability } = category;
   return (
-    <div className="border py-4 px-6 space-y-1 rounded-lg mx-4">
+    <div className="border py-4 px-6 space-y-1 rounded-lg mx-4 text-center">
       <div className="flex justify-center items-center">
         <img className="w-12 rounded-full" src={logo} alt="" />
       </div>
