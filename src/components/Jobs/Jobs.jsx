@@ -27,12 +27,16 @@ function Jobs() {
           <Job key={index} job={job}></Job>
         ))}
       </div>
-      <div className={`text-center mt-6 ${counter===jobs.length?'hidden':'block'}`}>
+      <div
+        className={`text-center mt-6 ${
+          counter === jobs.length ? 'hidden' : 'block'
+        }`}
+      >
         <button
           onClick={() => setCounter(jobs.length)}
-          className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md"
+          className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md text-lg font-semibold"
         >
-          View Details
+          View More
         </button>
       </div>
     </div>

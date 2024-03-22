@@ -40,6 +40,11 @@ function Job({ job }) {
           <p>{salary}</p>
         </div>
       </div>
+      <div>
+        <button className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md text-lg font-semibold">
+          View Details
+        </button>
+      </div>
     </div>
   );
 }
