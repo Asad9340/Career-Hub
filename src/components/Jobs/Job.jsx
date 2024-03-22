@@ -1,8 +1,9 @@
 import { FaLocationDot } from 'react-icons/fa6';
 import { AiFillDollarCircle } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 function Job({ job }) {
-  console.log(job);
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -41,9 +42,11 @@ function Job({ job }) {
         </div>
       </div>
       <div>
-        <button className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md text-lg font-semibold">
-          View Details
-        </button>
+        <Link to={`/job/${id}`}>
+          <button className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md text-lg font-semibold">
+            View Details
+          </button>
+        </Link>
       </div>
     </div>
   );
