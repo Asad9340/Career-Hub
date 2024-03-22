@@ -1,6 +1,6 @@
-import { createBrowserRouter } from "react-router-dom";
-import Layout from "../Layout/Layout";
-import Banner from "../Banner/Banner";
+import { createBrowserRouter } from 'react-router-dom';
+import Layout from '../Layout/Layout';
+import Homepage from '../Homepage/Homepage';
 
 export const router = createBrowserRouter([
   {
@@ -9,7 +9,8 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Banner />,  
+        element: <Homepage />,
+        loader:()=> fetch('../categories.json')
       },
     ],
   },
