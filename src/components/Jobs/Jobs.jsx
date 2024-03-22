@@ -3,6 +3,7 @@ import Job from './Job';
 
 function Jobs() {
   const [jobs, setJobs] = useState([]);
+  const [counter, setCounter] = useState(4);
   useEffect(() => {
     (async () => {
       const res = await fetch('../jobs.json');
@@ -22,12 +23,15 @@ function Jobs() {
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
-        {jobs.map((job, index) => (
+        {jobs.slice(0, counter).map((job, index) => (
           <Job key={index} job={job}></Job>
         ))}
       </div>
-      <div className='text-center mt-6'>
-        <button className="text-white bg-[#7E90FE] px-5 py-2 rounded-md">
+      <div className={`text-center mt-6 ${counter===jobs.length?'hidden':'block'}`}>
+        <button
+          onClick={() => setCounter(jobs.length)}
+          className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md"
+        >
           View Details
         </button>
       </div>
