@@ -4,7 +4,7 @@ function Banner() {
     <section className="bg-[#7E90FE0D] text-gray-800">
       <div className="container flex flex-col justify-center mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between max-w-5xl">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-          <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+          <h1 className="text-4xl md:text-5xl font-bold leading-none sm:text-6xl">
             On Step <br /> Closer To Your <br />
             <span className="text-violet-400">Dream Job</span>
           </h1>
