@@ -37,29 +37,31 @@ function AppliedJobs() {
     setDisplayJobs(result);
   }, [jobs]);
   return (
-    <div className="max-w-5xl mx-auto m-4">
-      <div>
-        <h2 className="text-center text-3xl font-bold my-4 md:my-14">
-          Applied Jobs
-        </h2>
-      </div>
-      <div className="flex justify-end my-4">
-        <select
-          value={value}
-          onChange={(e) => jobFilter(e)}
-          className="bg-slate-200 block h-8 w-28 rounded-md"
-          name="option"
-          id=""
-        >
-          <option value="all">All</option>
-          <option value="remote">Remote</option>
-          <option value="onsite">OnSite</option>
-        </select>
-      </div>
-      <div>
-        {displayJobs.map((job, index) => (
-          <DisplayJobs key={index} job={job}></DisplayJobs>
-        ))}
+    <div className="max-w-5xl mx-auto">
+      <div className='mx-4'>
+        <div>
+          <h2 className="text-center text-3xl font-bold my-4 md:my-14">
+            Applied Jobs
+          </h2>
+        </div>
+        <div className="flex justify-end my-4">
+          <select
+            value={value}
+            onChange={e => jobFilter(e)}
+            className="bg-slate-200 block h-8 w-28 rounded-md"
+            name="option"
+            id=""
+          >
+            <option value="all">All</option>
+            <option value="remote">Remote</option>
+            <option value="onsite">OnSite</option>
+          </select>
+        </div>
+        <div>
+          {displayJobs.map((job, index) => (
+            <DisplayJobs key={index} job={job}></DisplayJobs>
+          ))}
+        </div>
       </div>
     </div>
   );
