@@ -2,7 +2,6 @@ import { AiFillDollarCircle } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
 
 function DisplayJobs({ job }) {
-  console.log(job);
   const {
     logo,
     job_title,

@@ -15,26 +15,25 @@ function Navbar() {
           <li className="flex">
             <NavLink
               to="/"
-              className="flex items-center px-4 text-sm md:text-lg font-medium dark:border- text-violet-400 border-violet-400"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-violet-400 flex items-center px-4 text-sm md:text-lg font-medium dark:border- border-violet-400'
+                  : 'flex items-center px-4 text-sm md:text-lg font-medium dark:border- border-violet-400'
+              }
             >
               Home
             </NavLink>
           </li>
           <li className="flex">
             <NavLink
-              to='/appliedjobs'
-              className="flex items-center px-4 text-sm md:text-lg font-medium dark:border-"
+              to="/appliedjobs"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-violet-400 flex items-center px-4 text-sm md:text-lg font-medium dark:border- border-violet-400'
+                  : 'flex items-center px-4 text-sm md:text-lg font-medium dark:border- border-violet-400'
+              }
             >
               Applied Jobs
-            </NavLink>
-          </li>
-          <li className="flex">
-            <NavLink
-              rel="noopener noreferrer"
-              href="#"
-              className="flex items-center px-4 text-sm md:text-lg font-medium dark:border-"
-            >
-              Blog
             </NavLink>
           </li>
         </ul>
