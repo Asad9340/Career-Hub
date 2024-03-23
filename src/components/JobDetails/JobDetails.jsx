@@ -1,5 +1,6 @@
 import { useLoaderData, useParams } from 'react-router-dom';
 import { AiFillDollarCircle } from 'react-icons/ai';
+import { saveLocalStorage } from '../../utility/localStorage';
 
 function JobDetails() {
   const jobs = useLoaderData();
@@ -14,9 +15,8 @@ function JobDetails() {
     job_title,
     contact_information,
   } = job;
-  console.log(job);
   return (
-    <div className="max-w-5xl mx-auto my-6 md:my-10 lg:my-12">
+    <div className="max-w-5xl mx-4 md:mx-auto my-6 md:my-10 lg:my-12">
       <h2 className="text-3xl md:text-5xl font-semibold md:font-bold mb-10 text-center">
         Job Details
       </h2>
@@ -87,8 +87,11 @@ function JobDetails() {
               {contact_information.address}
             </p>
           </div>
-          <div className=' text-center mt-4 md:mt-6 mx-3'>
-            <button className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md text-lg font-semibold w-full">
+          <div className=" text-center mt-4 md:mt-6 mx-3">
+            <button
+              onClick={() => saveLocalStorage(Number(id))}
+              className="text-white bg-[#7E90FE] hover:bg-[#4c5ed2] active:bg-[#7E90FE] px-5 py-2 rounded-md text-lg font-semibold w-full"
+            >
               Apply Now
             </button>
           </div>

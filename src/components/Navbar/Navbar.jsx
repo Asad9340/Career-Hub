@@ -26,8 +26,7 @@ function Navbar() {
           </li>
           <li className="flex">
             <NavLink
-              rel="noopener noreferrer"
-              href="#"
+              to='/appliedjobs'
               className="flex items-center px-4 -mb-1 border-b-2 border-transparent"
             >
               Applied Jobs
